@@ -71,6 +71,12 @@ const projects = [
     tech: ["React", "Node.js", "Express", "MUI", "MySQL"],
   },
   {
+    title: "E-commerce",
+    description:
+      "Using MySQL Workbench, I created a stored procedure with logical conditions tailored for an e-commerce platform and transformed it into an API endpoint, allowing the front-end to consume and display the data dynamically.",
+    tech: ["React", "Node.js", "Express", "MUI", "MySQL"],
+  },
+  {
     title: "Sakla Game Admin System",
     description:
       "A secure admin dashboard designed for managing live game rounds—from initiating and declaring winning cards via livestream, to closing rounds and monitoring player activity. Includes access to game transactions, dashboards, and player registration with role-based access control.",
@@ -83,6 +89,12 @@ const projects = [
       "Socket IO",
       "VS Code",
     ],
+  },
+  {
+    title: "Personal Chat App",
+    description:
+      "I developed a full-stack chat application using the MERN stack (MongoDB, Express, React, Node.js). MongoDB was used as the database to store user information and chat messages.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Socket IO"],
   },
 ];
 
@@ -140,7 +152,7 @@ export default function WorkProjectsSection() {
 
           <Grid container spacing={4}>
             {projects.map((project, index) => (
-              <Grid key={index} size={{ xs: 12, md: 6 }}>
+              <Grid key={index} size={{ xs: 12, md: 6 }} display="flex">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -150,6 +162,8 @@ export default function WorkProjectsSection() {
                   <Card
                     sx={{
                       height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
                       backgroundColor: "#111",
                       border: "1px solid #1e1e1e",
                       borderRadius: 3,
@@ -161,7 +175,7 @@ export default function WorkProjectsSection() {
                       },
                     }}
                   >
-                    <CardContent>
+                    <CardContent sx={{ flexGrow: 1 }}>
                       <Stack
                         direction="row"
                         alignItems="center"
