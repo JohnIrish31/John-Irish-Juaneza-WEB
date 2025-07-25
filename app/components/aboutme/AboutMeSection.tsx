@@ -144,8 +144,8 @@ export default function AboutMeSection() {
             portfolio from scratch on an Ubuntu server in DigitalOcean using
             tools like{" "}
             <span style={{ fontWeight: "bolder", color: "#00FFD1" }}>
-              PuTTY, Nginx, Let's Encrypt SSL, UFW Firewall, and full HTTP/HTTPS
-              setup
+              PuTTY, Nginx, Let&apos;s Encrypt SSL, UFW Firewall, and full
+              HTTP/HTTPS setup
             </span>
             . It&apos;s been an exciting step forward, and I&apos;m continuing
             to sharpen my DevOps skills one command line at a time.{" "}
