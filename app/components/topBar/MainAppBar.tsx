@@ -180,7 +180,15 @@ export default function MainAppBar() {
                     </Box>
                   ))}
                 </Stack>
-                <Button className="connect-btn">
+                <Button
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/file/d/1GZlgiAGZ7z-chDZEAGDhT0X0Sk1KdNTu/view?usp=drive_link",
+                      "_blank"
+                    )
+                  }
+                  className="connect-btn"
+                >
                   <span>MY RESUME</span>
                 </Button>
               </Stack>
@@ -284,6 +292,12 @@ export default function MainAppBar() {
 
         <Box sx={{ mt: 3, textAlign: "center" }}>
           <Button
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/1GZlgiAGZ7z-chDZEAGDhT0X0Sk1KdNTu/view?usp=drive_link",
+                "_blank"
+              )
+            }
             variant="outlined"
             sx={{
               color: "#00FFD1",
