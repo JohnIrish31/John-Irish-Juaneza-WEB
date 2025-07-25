@@ -139,11 +139,11 @@ export default function AboutMeSection() {
             my way up to become a senior developer.
           </Typography>
           <Typography variant={isMobile ? "body2" : "h6"} color="#C0C0C0">
-            Today, my learning hasn&apos;t stopped. I&apos;m currently expanding
-            my skills into networking and server management, specifically
-            learning how to set up and manage Ubuntu environments on
-            DigitalOcean. It&apos;s a new chapter in my journey, and I&apos;m
-            excited to keep leveling up one command line at a time.{" "}
+            Today, my learning hasn&apos;t stopped. I&apos;ve recently deepened
+            my skills in networking and server management — I even deployed this
+            portfolio from scratch on an Ubuntu server in DigitalOcean.
+            It&apos;s been an exciting step forward, and I&apos;m continuing to
+            sharpen my DevOps skills one command line at a time.{""}
             <span style={{ fontWeight: "bolder", color: "#00FFD1" }}>
               Each day fuels my passion to keep learning and growing
             </span>

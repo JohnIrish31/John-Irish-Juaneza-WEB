@@ -156,6 +156,17 @@ export default function ContactMeSection() {
             >
               Send Message
             </Button>
+            <Typography
+              variant="body1"
+              sx={{ color: "#ccc", textAlign: "center", pb: 2 }}
+            >
+              Or reach me directly at: <br />
+              <strong style={{ color: "#00FFD1" }}>
+                juanezajohnirish@gmail.com
+              </strong>
+              <br />
+              <strong style={{ color: "#00FFD1" }}>+63 976 419 9934</strong>
+            </Typography>
           </Stack>
         </Paper>
       </motion.div>

@@ -49,7 +49,7 @@ const experiences = [
   {
     company: "Venture Protect Management and Consultancy Inc.",
     role: "Senior Full Stack Software Engineer",
-    duration: "July 2024 – Present",
+    duration: "July 2024 – Present - CONSULTANT",
     description:
       "Architected and developed full-scale systems from scratch, focusing on back-office dashboards, cash flow management, chart visualizations, and reporting tools. Led development using Next.js, Node.js, and MySQL and worked closely with DevOps for streamlined deployment on DigitalOcean.",
   },
