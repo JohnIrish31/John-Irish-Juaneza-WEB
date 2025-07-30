@@ -68,9 +68,9 @@ export default function BannerSection() {
         >
           I am a Software Engineer specializing in building scalable back-office
           dashboards and business analytics systems. My stack includes React,
-          Next.js, TypeScript, Node.js, Express, and MySQL combined with tools
-          and libraries like MUI, Chart.js, and Redux to create intuitive and
-          efficient user and admin interfaces.
+          Next.js, TypeScript, Node.js, Express, and MySQL — combined with tools
+          and libraries like MUI, Chart.js, Redux, and Docker to create
+          intuitive and efficient user and admin interfaces.
         </Typography>
       </Stack>
     </Box>
