@@ -122,7 +122,6 @@ export default function MainAppBar() {
                       icon: icon3,
                       url: "https://github.com/JohnIrish31",
                     },
-                    // { icon: icon3, url: "" },
                   ].map((item, index) => (
                     <Box
                       key={index}
@@ -262,7 +261,10 @@ export default function MainAppBar() {
                 icon: icon2,
                 url: "https://www.facebook.com/Juaneza.JohnIrish",
               },
-              // { icon: icon3, url: "" },
+              {
+                icon: icon3,
+                url: "https://github.com/JohnIrish31",
+              },
             ].map((item, index) => (
               <Box
                 key={index}
