@@ -19,7 +19,7 @@ import { FaBars } from "react-icons/fa";
 
 import icon1 from "../../Images/nav-icon1.svg";
 import icon2 from "../../Images/nav-icon2.svg";
-// import icon3 from "../../Images/nav-icon3.svg";
+import icon3 from "../../Images/nav-icon3.svg";
 
 export default function MainAppBar() {
   const theme = useTheme();
@@ -117,6 +117,10 @@ export default function MainAppBar() {
                     {
                       icon: icon2,
                       url: "https://www.facebook.com/Juaneza.JohnIrish",
+                    },
+                    {
+                      icon: icon3,
+                      url: "https://github.com/JohnIrish31",
                     },
                     // { icon: icon3, url: "" },
                   ].map((item, index) => (
