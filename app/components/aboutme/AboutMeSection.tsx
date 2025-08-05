@@ -7,6 +7,7 @@ import {
   useMediaQuery,
   Stack,
   Divider,
+  Chip,
 } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 import profile from "../../Images/profilePhoto.jpg";
@@ -123,7 +124,7 @@ export default function AboutMeSection() {
           <AccentLine />
           <Typography variant={isMobile ? "body2" : "h6"} color="#C0C0C0">
             Hi, I’m John Irish a former seafarer who transitioned into tech and
-            is now a Senior Full Stack Software Engineer.
+            is now a Full Stack Software Engineer.
           </Typography>
           <Typography variant={isMobile ? "body2" : "h6"} color="#C0C0C0">
             It all started when I stumbled upon a Facebook ad for a coding
@@ -153,6 +154,61 @@ export default function AboutMeSection() {
               Each day fuels my passion to keep learning and growing
             </span>
           </Typography>
+          <AccentLine />
+
+          <Typography
+            variant={isMobile ? "h6" : "h5"}
+            sx={{
+              fontWeight: "bold",
+              color: "#00FFD1",
+              mt: 2,
+            }}
+          >
+            Tech Stack & Skills
+          </Typography>
+
+          <Stack direction="row" flexWrap="wrap" gap={1} mt={1}>
+            {[
+              "Next.js",
+              "React",
+              "TypeScript",
+              "JavaScript",
+              "Redux",
+              "Node.js",
+              "Express",
+              "MySQL",
+              "MongoDB",
+              "REST API",
+              "MUI",
+              "Tailwind",
+              "PrimeReact",
+              "Bootstrap",
+              "Chart.js",
+              "Socket.IO",
+              "CSV Export",
+              "File Upload",
+              "PuTTY",
+              "Nginx",
+              "Let’s Encrypt SSL",
+              "UFW Firewall",
+              "Ubuntu Server",
+              "VS Code",
+              "Git",
+              "Framer Motion",
+            ].map((skill, index) => (
+              <Chip
+                key={index}
+                label={skill}
+                variant="outlined"
+                size="small"
+                sx={{
+                  borderColor: "#00FFD1",
+                  color: "#00FFD1",
+                  fontSize: "0.75rem",
+                }}
+              />
+            ))}
+          </Stack>
         </Stack>
       </Box>
     </Box>

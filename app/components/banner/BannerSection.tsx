@@ -52,7 +52,7 @@ export default function BannerSection() {
           }}
         >
           <Typewriter
-            words={["SENIOR FULL STACK SOFTWARE ENGINEER"]}
+            words={["FULL STACK SOFTWARE ENGINEER"]}
             loop={1}
             cursor
             cursorStyle="|"
