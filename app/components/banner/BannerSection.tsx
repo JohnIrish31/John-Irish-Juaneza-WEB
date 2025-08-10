@@ -67,10 +67,11 @@ export default function BannerSection() {
           variant={isMobile ? "body2" : "h6"}
         >
           I am a Software Engineer specializing in building scalable back-office
-          dashboards and business analytics systems. My stack includes React,
-          Next.js, TypeScript, Node.js, Express, and MySQL — combined with tools
-          and libraries like MUI, Chart.js, Redux, Docker, and Git to create
-          intuitive and efficient user and admin interfaces.
+          dashboards and business analytics systems. I work with React, Next.js,
+          TypeScript, Node.js, Express, and MySQL, and use tools like MUI,
+          Redux, Chart.js, Docker, and Git to create intuitive and efficient
+          user and admin interfaces. I also have hands-on experience with Python
+          Django for API development and React Native for mobile apps.
         </Typography>
       </Stack>
     </Box>
