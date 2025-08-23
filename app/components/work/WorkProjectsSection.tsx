@@ -18,9 +18,9 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Game Insurance Back Office",
+    title: "Insurance Back Office",
     description:
-      "A multi-role back-office system with dedicated views and permissions for finance, admin, cashier, and customer service teams. Features include cash flow tracking, admin dashboards, KYC management, customer registration, and manual cashiering — all in one centralized platform.",
+      "A multi-role back-office system with dedicated views and permissions for finance, admin, cashiers, and customer service teams. Features include cash flow tracking, admin dashboards, KYC management, customer registration, and manual cashiering — all in one centralized platform.",
     tech: [
       "Next.js",
       "typescript",
@@ -77,9 +77,9 @@ const projects = [
     tech: ["React", "Node.js", "Express", "MUI", "MySQL"],
   },
   {
-    title: "Sakla Game Admin System",
+    title: "Game Admin System",
     description:
-      "A secure admin dashboard designed for managing live game rounds—from initiating and declaring winning cards via livestream, to closing rounds and monitoring player activity. Includes access to game transactions, dashboards, and player registration with role-based access control.",
+      "A secure admin dashboard designed for managing live game rounds—from initiating and declaring winners via livestream, to closing rounds and monitoring activities. Includes access to transactions, dashboards, and registration with role-based access control.",
     tech: [
       "React",
       "Node.js",
