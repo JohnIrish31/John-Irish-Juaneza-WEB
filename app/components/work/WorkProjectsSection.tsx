@@ -18,6 +18,30 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Automated Inventory Management system",
+    description:
+      "An automated warehouse inventory system that manages the full lifecycle of goods — including goods receipt, withdrawal requests, and goods issuance. It also provides dashboards and inventory reports for warehouse operations. I primarily handled backend development, including infrastructure planning, database design, and API implementation, while supervising the team and managing tasks for frontend developers, contributing to UI work when needed.",
+
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Redux",
+      "Node.js",
+      "Express",
+      "REST API",
+      "AWS RDS (MySQL)",
+      "AWS S3",
+      "AWS EC2",
+      "AWS Cloudfront",
+      "AWS SES",
+      "MUI",
+      "PrimeReact",
+      "CSV Export",
+      "PDF Upload",
+      "CSV Upload",
+    ],
+  },
+  {
     title: "Insurance Back Office",
     description:
       "A multi-role back-office system with dedicated views and permissions for finance, admin, cashiers, and customer service teams. Features include cash flow tracking, admin dashboards, KYC management, customer registration, and manual cashiering — all in one centralized platform.",

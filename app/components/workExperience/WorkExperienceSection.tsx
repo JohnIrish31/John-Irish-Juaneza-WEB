@@ -47,6 +47,13 @@ const TimelineDot = styled(Box)(({ theme }) => ({
 
 const experiences = [
   {
+    company: "Global Visions Inc.",
+    role: "Senior Full Stack Software Engineer",
+    duration: "October 2024 – Present",
+    description:
+      "Responsible for designing and building core systems that support the company’s warehouse logistics operations. My work focuses on AWS infrastructure planning, database architecture, stored procedures, and API development, with occasional frontend contributions when needed. I collaborate closely with internal teams to create scalable solutions for multi-tenant warehouse management, inventory handling, and operational process automation.",
+  },
+  {
     company: "Venture Protect Management and Consultancy Inc.",
     role: "Senior Full Stack Software Engineer",
     duration: "July 2024 – August 2025 ( End Contract )",

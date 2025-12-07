@@ -122,28 +122,92 @@ export default function AboutMeSection() {
           </Typography>
 
           <AccentLine />
+
           <Typography variant={isMobile ? "body2" : "h6"} color="#C0C0C0">
-            Hi, I’m John Irish a former seafarer who transitioned into tech and
-            is now a Full Stack Software Engineer.
+            Hi, I&apos;m John Irish, a former seafarer who transitioned into
+            tech and is now a
+            <span
+              style={{
+                fontWeight: "bolder",
+                color: "#00FFD1",
+                paddingLeft: ".5em",
+              }}
+            >
+              Full Stack Software Engineer
+            </span>
+            .
           </Typography>
+
           <Typography variant={isMobile ? "body2" : "h6"} color="#C0C0C0">
-            It all started when I stumbled upon a Facebook ad for a coding
-            bootcamp. Out of curiosity, I clicked and that simple action sparked
-            a passion I never saw coming. From the first time I saw how code
-            worked, it felt like it was speaking to me “You need to study me” So
-            I dove in headfirst.
+            My journey began when I discovered a coding bootcamp out of
+            curiosity. What started as a simple click quickly became a long-term
+            passion. I committed myself to learning software development, and
+            over time, I grew from building basic interfaces to developing
+            <span
+              style={{
+                fontWeight: "bolder",
+                color: "#00FFD1",
+                paddingLeft: ".5em",
+              }}
+            >
+              full-stack systems, internal business platforms, and
+              cloud-deployed applications
+            </span>
+            .
           </Typography>
+
           <Typography variant={isMobile ? "body2" : "h6"} color="#C0C0C0">
-            I enrolled in the bootcamp and gave it everything I had. I was
-            determined to grow from building frontend interfaces and backend
-            systems to exploring server management. In just two years, I worked
-            my way up to become a senior developer.
+            I&apos;ve built systems such as
+            <span
+              style={{
+                fontWeight: "bolder",
+                color: "#00FFD1",
+                paddingLeft: ".5rem",
+              }}
+            >
+              warehouse management tools
+            </span>
+            ,
+            <span style={{ fontWeight: "bolder", color: "#00FFD1" }}>
+              back-office dashboards
+            </span>
+            ,
+            <span style={{ fontWeight: "bolder", color: "#00FFD1" }}>
+              analytics platforms
+            </span>
+            ,
+            <span style={{ fontWeight: "bolder", color: "#00FFD1" }}>
+              CRM modules
+            </span>
+            , and operational automation features. I work primarily with
+            <span
+              style={{
+                fontWeight: "bolder",
+                color: "#00FFD1",
+                paddingLeft: ".5em",
+              }}
+            >
+              Next.js, React, TypeScript, Node.js, Express, and MySQL
+            </span>
+            , translating complex requirements into clean and efficient
+            solutions.
           </Typography>
+
           <Typography variant={isMobile ? "body2" : "h6"} color="#C0C0C0">
-            Today, my learning hasn&apos;t stopped. I&apos;ve recently deepened
-            my skills in networking and server management — I even deployed this
-            portfolio from scratch on an Ubuntu server in DigitalOcean using
-            tools like{" "}
+            I also handle cloud deployment and server management. I&apos;ve
+            deepened my skills in
+            <span
+              style={{
+                fontWeight: "bolder",
+                color: "#00FFD1",
+                paddingLeft: ".5em",
+                paddingRight: ".5em",
+              }}
+            >
+              AWS (EC2, RDS, S3, CloudFront, VPC, CloudWatch, SES)
+            </span>
+            and Linux systems administration. I deployed this portfolio from
+            scratch on an Ubuntu server in DigitalOcean using tools like{" "}
             <span style={{ fontWeight: "bolder", color: "#00FFD1" }}>
               PuTTY, Nginx, Let&apos;s Encrypt SSL, UFW Firewall, and full
               HTTP/HTTPS setup
@@ -151,9 +215,10 @@ export default function AboutMeSection() {
             . It&apos;s been an exciting step forward, and I&apos;m continuing
             to sharpen my DevOps skills one command line at a time.{" "}
             <span style={{ fontWeight: "bolder", color: "#00FFD1" }}>
-              Each day fuels my passion to keep learning and growing
+              Each day fuels my passion to keep learning and growing.
             </span>
           </Typography>
+
           <AccentLine />
 
           <Typography
@@ -166,35 +231,54 @@ export default function AboutMeSection() {
           >
             Tech Stack & Skills
           </Typography>
-
           <Stack direction="row" flexWrap="wrap" gap={1} mt={1}>
             {[
+              // Frontend
               "Next.js",
               "React",
               "TypeScript",
               "JavaScript",
-              "Redux",
-              "Node.js",
-              "Express",
-              "MySQL",
-              "MongoDB",
-              "REST API",
               "MUI",
               "Tailwind",
               "PrimeReact",
               "Bootstrap",
               "Chart.js",
+              "Framer Motion",
+
+              // Backend
+              "Node.js",
+              "Express",
+              "REST API",
               "Socket.IO",
+
+              // Database
+              "MySQL",
+              "MongoDB",
+
+              // Features
               "CSV Export",
               "File Upload",
-              "PuTTY",
+
+              // Cloud & DevOps
+              "AWS EC2",
+              "AWS RDS",
+              "AWS S3",
+              "AWS CloudFront",
+              "AWS VPC",
+              "AWS CloudWatch",
+              "Amazon SES",
+              "DigitalOcean",
+              "Cloudflare",
+              "Docker",
               "Nginx",
-              "Let’s Encrypt SSL",
+              "Let&apos;s Encrypt SSL",
               "UFW Firewall",
               "Ubuntu Server",
-              "VS Code",
+              "PuTTY",
+
+              // Tools
               "Git",
-              "Framer Motion",
+              "VS Code",
             ].map((skill, index) => (
               <Chip
                 key={index}

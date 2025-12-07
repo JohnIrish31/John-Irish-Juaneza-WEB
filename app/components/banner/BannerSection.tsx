@@ -66,12 +66,11 @@ export default function BannerSection() {
           sx={{ pr: isMobile ? "0px" : "20rem" }}
           variant={isMobile ? "body2" : "h6"}
         >
-          I am a Software Engineer specializing in building scalable back-office
-          dashboards and business analytics systems. I work with React, Next.js,
-          TypeScript, Node.js, Express, and MySQL, and use tools like MUI,
-          Redux, Chart.js, Docker, and Git to create intuitive and efficient
-          user and admin interfaces. I also have hands-on experience with Python
-          Django for API development and React Native for mobile apps.
+          I build scalable full-stack systems including warehouse management
+          systems, back-office dashboards, analytics platforms, and CRM tools
+          using Next.js, React, TypeScript, Node.js, and MySQL. I also deploy
+          production applications on AWS (EC2, RDS, S3, CloudFront, VPC,
+          CloudWatch, SES) and manage Linux cloud servers with Nginx and Docker.
         </Typography>
       </Stack>
     </Box>
