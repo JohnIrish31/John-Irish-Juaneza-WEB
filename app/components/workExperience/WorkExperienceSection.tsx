@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Typography,
-  useTheme,
-  useMediaQuery,
-  Stack,
-  Divider,
-  Paper,
-} from "@mui/material";
+import { Box, Typography, useTheme, useMediaQuery, Stack, Divider, Paper } from "@mui/material";
 import { styled } from "@mui/system";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -48,8 +40,8 @@ const TimelineDot = styled(Box)(({ theme }) => ({
 const experiences = [
   {
     company: "Global Visions Inc.",
-    role: "Senior Full Stack Software Engineer",
-    duration: "October 2024 – Present",
+    role: "Senior Full Stack Developer",
+    duration: "October 2025 – Present",
     description:
       "Responsible for designing and building core systems that support the company’s warehouse logistics operations. My work focuses on AWS infrastructure planning, database architecture, stored procedures, and API development, with occasional frontend contributions when needed. I collaborate closely with internal teams to create scalable solutions for multi-tenant warehouse management, inventory handling, and operational process automation.",
   },
@@ -99,10 +91,7 @@ function ExperienceItem({ exp, index }: { exp: any; index: number }) {
         <Typography variant="h6" sx={{ color: "#00FFD1", fontWeight: 600 }}>
           {exp.role} @ {exp.company}
         </Typography>
-        <Typography
-          variant="subtitle2"
-          sx={{ color: "#B0B0B0", fontStyle: "italic", mb: 1 }}
-        >
+        <Typography variant="subtitle2" sx={{ color: "#B0B0B0", fontStyle: "italic", mb: 1 }}>
           {exp.duration}
         </Typography>
         <Typography variant="body1" sx={{ color: "#C0C0C0", lineHeight: 1.6 }}>

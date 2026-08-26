@@ -3,322 +3,205 @@
 import {
   AppBar,
   Box,
-  Toolbar,
-  useMediaQuery,
-  useTheme,
+  Button,
   IconButton,
-  Stack,
-  Typography,
   Menu,
   MenuItem,
-  Button,
+  Stack,
+  Toolbar,
+  Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import Image from "next/image";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
-
 import icon1 from "../../Images/nav-icon1.svg";
 import icon2 from "../../Images/nav-icon2.svg";
 import icon3 from "../../Images/nav-icon3.svg";
 
+const navigation = [
+  { label: "About", id: "about-me" },
+  { label: "Experience", id: "experience" },
+  { label: "Projects", id: "project" },
+  { label: "Contact", id: "contact" },
+];
+
+const socialLinks = [
+  { icon: icon1, label: "LinkedIn", url: "https://www.linkedin.com/in/johnirishjuaneza/" },
+  { icon: icon2, label: "Facebook", url: "https://www.facebook.com/Juaneza.JohnIrish" },
+  { icon: icon3, label: "GitHub", url: "https://github.com/JohnIrish31" },
+];
+
 export default function MainAppBar() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [menuAnchor, setMenuAnchor] = useState<HTMLElement | null>(null);
 
-  const [anchorElMobileApp, setAnchorElMobileApp] =
-    useState<null | HTMLElement>(null);
-
-  const handleClickMobileApp = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElMobileApp(event.currentTarget);
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setMenuAnchor(null);
   };
 
-  const handleCloseMobileApp = () => {
-    setAnchorElMobileApp(null);
-  };
-
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-      handleCloseMobileApp();
-    }
-  };
+  const openResume = () =>
+    window.open(
+      "https://drive.google.com/file/d/1i9V9LQ91BnWLF18A8PdkToTyGtGLT2KI/view?usp=drive_link",
+      "_blank",
+      "noopener,noreferrer"
+    );
 
   return (
     <AppBar
       position="fixed"
       elevation={0}
       sx={{
-        zIndex: 1201,
-        backgroundColor: "#000000",
-        py: "1rem",
+        bgcolor: "rgba(6,11,18,.92)",
+        backdropFilter: "blur(14px)",
+        borderBottom: "1px solid rgba(255,255,255,.08)",
       }}
     >
-      <Box sx={{ px: isMobile ? "" : "5rem" }}>
-        <Toolbar
-          sx={{
-            background: "#00000",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
+      <Toolbar
+        sx={{
+          minHeight: { xs: 66, md: 72 },
+          maxWidth: 1440,
+          width: "100%",
+          mx: "auto",
+          px: { xs: 2.5, md: 6 },
+        }}
+      >
+        <Box
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          sx={{ cursor: "pointer", minWidth: { md: 190 } }}
         >
           <Typography
-            variant="h6"
             sx={{
               fontFamily: "var(--font-merriweather)",
-              fontWeight: "bold",
-              color: "white",
-              cursor: "pointer",
+              fontWeight: 700,
+              color: "#f1fbfa",
+              fontSize: { xs: ".95rem", md: "1.05rem" },
             }}
           >
-            DevJohn
+            John Irish<span style={{ color: "#00ffd1" }}>.</span>
           </Typography>
+        </Box>
 
-          <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
-            {!isMobile && (
-              <Stack
-                direction="row"
-                spacing={4}
-                alignItems="center"
-                justifyContent="center"
+        {!isMobile && (
+          <Stack direction="row" spacing={3.5} sx={{ flex: 1, justifyContent: "center" }}>
+            {navigation.map((item) => (
+              <Button
+                key={item.id}
+                onClick={() => scrollTo(item.id)}
+                sx={{
+                  color: "rgba(241,251,250,.7)",
+                  textTransform: "none",
+                  fontWeight: 600,
+                  fontSize: ".82rem",
+                  p: 0,
+                  minWidth: 0,
+                  "&:hover": { color: "#00ffd1", bgcolor: "transparent" },
+                }}
               >
-                {["ABOUT ME", "EXPERIENCE", "PROJECT", "CONTACT"].map(
-                  (item) => (
-                    <Typography
-                      key={item}
-                      onClick={() =>
-                        scrollToSection(item.toLowerCase().replace(" ", "-"))
-                      }
-                      variant="h6"
-                      sx={{
-                        fontFamily: "var(--font-merriweather)",
-                        cursor: "pointer",
-                        letterSpacing: "0.5px",
-                        fontWeight: 500,
-                        color: "#F0E8DD",
-                        transition: "color 0.1s ease-in-out",
-                        "&:hover": {
-                          color: "white",
-                        },
-                      }}
-                    >
-                      {item}
-                    </Typography>
-                  )
-                )}
+                {item.label}
+              </Button>
+            ))}
+          </Stack>
+        )}
 
-                <Stack direction="row" spacing={2}>
-                  {[
-                    {
-                      icon: icon1,
-                      url: "https://www.linkedin.com/in/johnirishjuaneza/",
-                    },
-                    {
-                      icon: icon2,
-                      url: "https://www.facebook.com/Juaneza.JohnIrish",
-                    },
-                    {
-                      icon: icon3,
-                      url: "https://github.com/JohnIrish31",
-                    },
-                  ].map((item, index) => (
-                    <Box
-                      key={index}
-                      onClick={() => window.open(item.url, "_blank")}
-                      sx={{
-                        display: "inline-block",
-                        position: "relative",
-                        width: 42,
-                        height: 42,
-                        borderRadius: "50%",
-                        border: "1px solid rgba(255, 255, 255, 0.5)",
-                        backgroundColor: "rgba(217, 217, 217, 0.1)",
-                        overflow: "hidden",
-                        cursor: "pointer",
-                        transition: "all 0.3s ease-in-out",
-                        "&::before": {
-                          content: '""',
-                          position: "absolute",
-                          width: 42,
-                          height: 42,
-                          top: 0,
-                          left: 0,
-                          backgroundColor: "#ffffff",
-                          borderRadius: "50%",
-                          transform: "scale(0)",
-                          transition: "transform 0.3s ease-in-out",
-                          zIndex: 0,
-                        },
-                        "&:hover::before": {
-                          transform: "scale(1)",
-                        },
-                        "&:hover img": {
-                          filter:
-                            "brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%)",
-                        },
-                      }}
-                    >
-                      <Box
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          width: "100%",
-                          height: "100%",
-                          position: "relative",
-                          zIndex: 1,
-                        }}
-                      >
-                        <Image
-                          src={item.icon}
-                          alt={`navIcon${index + 1}`}
-                          width={18}
-                          height={18}
-                          style={{
-                            objectFit: "contain",
-                          }}
-                        />
-                      </Box>
-                    </Box>
-                  ))}
-                </Stack>
-                <Button
-                  onClick={() =>
-                    window.open(
-                      "https://drive.google.com/file/d/1i9V9LQ91BnWLF18A8PdkToTyGtGLT2KI/view?usp=drive_link",
-                      "_blank"
-                    )
-                  }
-                  className="connect-btn"
-                >
-                  <span>MY RESUME</span>
-                </Button>
-              </Stack>
-            )}
-
-            {/* Mobile: Menu Icon */}
-            {isMobile && (
-              <IconButton color="inherit" onClick={handleClickMobileApp}>
-                <FaBars />
+        {!isMobile ? (
+          <Box
+            sx={{
+              minWidth: 230,
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "center",
+              gap: 0.2,
+            }}
+          >
+            {socialLinks.map((item) => (
+              <IconButton
+                key={item.label}
+                onClick={() => window.open(item.url, "_blank", "noopener,noreferrer")}
+                aria-label={item.label}
+                size="small"
+                sx={{ width: 30, height: 30, "&:hover": { bgcolor: "rgba(0,255,209,.1)" } }}
+              >
+                <Image src={item.icon} alt="" width={15} height={15} />
               </IconButton>
-            )}
+            ))}
+            <Button
+              onClick={openResume}
+              variant="outlined"
+              sx={{
+                ml: 0.8,
+                color: "#00ffd1",
+                borderColor: "rgba(0,255,209,.5)",
+                borderRadius: 1.25,
+                textTransform: "none",
+                px: 1.5,
+                py: 0.65,
+                fontSize: ".75rem",
+                fontWeight: 700,
+                "&:hover": { borderColor: "#00ffd1", bgcolor: "rgba(0,255,209,.08)" },
+              }}
+            >
+              Resume
+            </Button>
           </Box>
-        </Toolbar>
-      </Box>
+        ) : (
+          <Box sx={{ ml: "auto" }}>
+            <IconButton
+              onClick={(event) => setMenuAnchor(event.currentTarget)}
+              sx={{ color: "#eaf7f5" }}
+              aria-label="Open navigation"
+            >
+              <FaBars size={18} />
+            </IconButton>
+          </Box>
+        )}
+      </Toolbar>
 
       <Menu
-        anchorEl={anchorElMobileApp}
-        open={Boolean(anchorElMobileApp)}
-        onClose={handleCloseMobileApp}
+        anchorEl={menuAnchor}
+        open={Boolean(menuAnchor)}
+        onClose={() => setMenuAnchor(null)}
         PaperProps={{
           sx: {
             mt: 1,
-            boxShadow: 3,
+            width: "calc(100vw - 28px)",
+            bgcolor: "#0b151e",
+            border: "1px solid rgba(255,255,255,.1)",
             borderRadius: 2,
-            width: "90vw",
-            backgroundColor: "#111",
-            px: 2,
-            py: 2,
+            p: 0.75,
           },
         }}
       >
-        {["ABOUT ME", "EXPERIENCE", "PROJECT", "CONTACT"].map((item, idx) => (
+        {navigation.map((item) => (
           <MenuItem
-            key={idx}
-            onClick={() =>
-              scrollToSection(item.toLowerCase().replace(" ", "-"))
-            }
-            sx={{
-              color: "#eee",
-              fontWeight: 500,
-              fontSize: "1rem",
-              borderRadius: 1,
-              "&:hover": {
-                backgroundColor: "#222",
-              },
-            }}
+            key={item.id}
+            onClick={() => scrollTo(item.id)}
+            sx={{ color: "#eaf7f5", borderRadius: 1.25, py: 1.25 }}
           >
-            {item}
+            {item.label}
           </MenuItem>
         ))}
-
-        <Box sx={{ mt: 2 }}>
-          <Typography
-            variant="body2"
-            sx={{ color: "#aaa", mb: 1, fontWeight: "bold" }}
-          >
-            SOCIAL LINKS
-          </Typography>
-
-          <Stack direction="row" spacing={2}>
-            {[
-              {
-                icon: icon1,
-                url: "https://www.linkedin.com/in/johnirishjuaneza/",
-              },
-              {
-                icon: icon2,
-                url: "https://www.facebook.com/Juaneza.JohnIrish",
-              },
-              {
-                icon: icon3,
-                url: "https://github.com/JohnIrish31",
-              },
-            ].map((item, index) => (
-              <Box
-                key={index}
-                onClick={() => window.open(item.url, "_blank")}
-                sx={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  border: "1px solid rgba(255,255,255,0.3)",
-                  backgroundColor: "#1a1a1a",
-                  cursor: "pointer",
-                  transition: "0.3s",
-                  "&:hover": {
-                    backgroundColor: "#00FFD1",
-                  },
-                }}
-              >
-                <Image
-                  src={item.icon}
-                  alt={`icon-${index}`}
-                  width={16}
-                  height={16}
-                />
-              </Box>
-            ))}
-          </Stack>
-        </Box>
-
-        <Box sx={{ mt: 3, textAlign: "center" }}>
-          <Button
-            onClick={() =>
-              window.open(
-                "https://drive.google.com/file/d/1i9V9LQ91BnWLF18A8PdkToTyGtGLT2KI/view?usp=drive_link",
-                "_blank"
-              )
-            }
-            variant="outlined"
-            sx={{
-              color: "#00FFD1",
-              borderColor: "#00FFD1",
-              fontWeight: 600,
-              px: 4,
-              "&:hover": {
-                backgroundColor: "#00FFD1",
-                color: "#000",
-              },
-            }}
-          >
-            MY RESUME
-          </Button>
-        </Box>
+        <MenuItem
+          onClick={openResume}
+          sx={{ color: "#00ffd1", fontWeight: 700, borderRadius: 1.25, py: 1.25 }}
+        >
+          View resume
+        </MenuItem>
+        <Stack direction="row" spacing={1} sx={{ px: 1.5, py: 1 }}>
+          {socialLinks.map((item) => (
+            <IconButton
+              key={item.label}
+              onClick={() => window.open(item.url, "_blank", "noopener,noreferrer")}
+              aria-label={item.label}
+              size="small"
+            >
+              <Image src={item.icon} alt="" width={16} height={16} />
+            </IconButton>
+          ))}
+        </Stack>
       </Menu>
     </AppBar>
   );

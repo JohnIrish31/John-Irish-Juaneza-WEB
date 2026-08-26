@@ -23,9 +23,9 @@ export default function ContactMeSection() {
   const [message, setMessage] = useState("");
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
-  const [snackbarSeverity, setSnackbarSeverity] = useState<
-    "success" | "error" | "warning"
-  >("success");
+  const [snackbarSeverity, setSnackbarSeverity] = useState<"success" | "error" | "warning">(
+    "success"
+  );
 
   const handleSubmit = async () => {
     if (!email.trim() || !message.trim()) {
@@ -156,14 +156,9 @@ export default function ContactMeSection() {
             >
               Send Message
             </Button>
-            <Typography
-              variant="body1"
-              sx={{ color: "#ccc", textAlign: "center", pb: 2 }}
-            >
+            <Typography variant="body1" sx={{ color: "#ccc", textAlign: "center", pb: 2 }}>
               Or reach me directly at: <br />
-              <strong style={{ color: "#00FFD1" }}>
-                juanezajohnirish@gmail.com
-              </strong>
+              <strong style={{ color: "#00FFD1" }}>juanezajohnirish@gmail.com</strong>
               <br />
               <strong style={{ color: "#00FFD1" }}>+63 976 419 9934</strong>
             </Typography>

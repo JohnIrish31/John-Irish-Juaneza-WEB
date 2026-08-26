@@ -6,14 +6,8 @@ import Box from "@mui/material/Box";
 const CursorSpotlight = () => {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      document.documentElement.style.setProperty(
-        "--cursor-x",
-        `${e.clientX}px`
-      );
-      document.documentElement.style.setProperty(
-        "--cursor-y",
-        `${e.clientY}px`
-      );
+      document.documentElement.style.setProperty("--cursor-x", `${e.clientX}px`);
+      document.documentElement.style.setProperty("--cursor-y", `${e.clientY}px`);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
