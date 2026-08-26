@@ -26,7 +26,7 @@ const TimelineItemBase = styled(Paper)(({ theme }) => ({
   },
 }));
 
-const TimelineDot = styled(Box)(({ theme }) => ({
+const TimelineDot = styled(Box)(() => ({
   position: "absolute",
   left: "-12px",
   top: "20px",
@@ -68,7 +68,7 @@ const experiences = [
   },
 ];
 
-const AccentLine = styled(Divider)(({ theme }) => ({
+const AccentLine = styled(Divider)(() => ({
   backgroundColor: "#00FFD1",
   height: "3px",
   width: "100%",
