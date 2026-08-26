@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import profile from "../../Images/profilePhoto.jpg";
+import profile from "../../Images/profilePhoto.png";
 
 const skills = [
   "Next.js",
