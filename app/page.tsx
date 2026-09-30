@@ -9,6 +9,7 @@ import WorkExperienceSection from "./components/workExperience/WorkExperienceSec
 import WorkProjectsSection from "./components/work/WorkProjectsSection";
 import ContactMeSection from "./components/contact/ContactMeSection";
 import PersonalSection from "./components/personal/PersonalSection";
+import PersonalProjectsSection from "./components/personalProjects/PersonalProjectsSection";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width:600px)");
@@ -27,6 +28,7 @@ export default function Home() {
       <AboutMeSection />
       <WorkExperienceSection />
       <WorkProjectsSection />
+      <PersonalProjectsSection />
       <PersonalSection />
       <ContactMeSection />
       <Box

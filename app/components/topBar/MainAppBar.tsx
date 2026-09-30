@@ -24,6 +24,7 @@ const navigation = [
   { label: "About", id: "about-me" },
   { label: "Experience", id: "experience" },
   { label: "Projects", id: "project" },
+  { label: "Personal Projects", id: "personal-projects" },
   { label: "Contact", id: "contact" },
 ];
 

@@ -31,16 +31,19 @@ const skills = [
   "SSL / TLS",
   "Docker",
   "Nginx",
-];
-const learningSkills = [
-  "React Native",
   "Python FastAPI",
   "ORM",
   "PostgreSQL",
   "SQLAlchemy",
   "Alembic",
   "Redis",
-  "AI Integration",
+];
+const learningSkills = [
+  "React Native",
+  "LLM APIs",
+  "Prompt Engineering",
+  "RAG (Retrieval-Augmented Generation)",
+  "AI Agents",
 ];
 
 export default function AboutMeSection() {
