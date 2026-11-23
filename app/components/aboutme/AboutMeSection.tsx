@@ -17,6 +17,7 @@ import profile from "../../Images/profilePhoto.jpg";
 const skills = [
   "Next.js",
   "React",
+  "React Native (Expo)",
   "TypeScript",
   "Node.js",
   "Express",
@@ -52,7 +53,6 @@ const skills = [
   "GitHub Actions CI/CD",
 ];
 const learningSkills = [
-  "React Native",
   "LLM APIs",
   "Prompt Engineering",
   "RAG (Retrieval-Augmented Generation)",
