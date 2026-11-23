@@ -46,7 +46,7 @@ export default function MainAppBar() {
 
   const openResume = () =>
     window.open(
-      "https://drive.google.com/file/d/1J6oSAeX9AAHmPjRqtWdPCkVZmvpaxyvq/view?usp=drive_link",
+      "https://drive.google.com/file/d/1SKJlH3Pb5tXwxA_khf3teESenMoSS9tK/view?usp=sharing",
       "_blank",
       "noopener,noreferrer"
     );
