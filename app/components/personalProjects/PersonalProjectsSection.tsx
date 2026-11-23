@@ -1,15 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  Chip,
-  Grid,
-  Stack,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, Button, Chip, Grid, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { FiExternalLink, FiGlobe, FiImage } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
@@ -51,9 +42,33 @@ const personalProjects = [
     image: "/projects/kinitako-banner.png",
     featured: true,
   },
+  {
+    title: "Pinoy Libangan",
+    tagline: "A night-time Filipino perya online — every game is a booth, in English or Tagalog.",
+    description:
+      "A game lobby I designed and built that brings together a growing collection of free Filipino browser games, each one its own booth at a virtual perya: Kupit sa Fiesta (a barkada deduction game), Sindi (parol strategy), Para Po! (a jeepney race), Hanap-Alaga and Hardin ni Aling Nena (puzzles), Sungka, Hulaan Mo! (a heads-up party game), and a Baybayin wallpaper tool. Every game and the lobby itself work in full English and Tagalog. It's a static site with zero runtime dependencies: the booth cards, JSON-LD, and sitemap are pre-rendered from a single games catalog at build time by a custom Vite plugin, so everything shows even with JavaScript off, and the ~3 KB script only adds filters, shareable filter URLs, a random-game button, sound, and toasts. The build enforces gzip size budgets and fails if a page gets too heavy.",
+    tech: [
+      "TypeScript",
+      "Vite (custom build plugin)",
+      "Vanilla JS, zero runtime deps",
+      "Static pre-rendering",
+      "i18n (English / Tagalog)",
+      "SEO: JSON-LD + sitemap",
+      "Vitest",
+      "Performance budgets",
+      "Cloudflare Pages",
+    ],
+    status: "Live",
+    websiteUrl: "https://www.pinoylibangan.site",
+    appUrl: "",
+    sourceUrl: "",
+    image: "/projects/pinoy-libangan-banner.png",
+    imageBg: "#110d33",
+    featured: true,
+  },
 ];
 
-function ProjectImage({ image, title }: { image?: string; title: string }) {
+function ProjectImage({ image, title, bg }: { image?: string; title: string; bg?: string }) {
   if (image) {
     return (
       <Box
@@ -61,7 +76,7 @@ function ProjectImage({ image, title }: { image?: string; title: string }) {
           width: "100%",
           height: "100%",
           minHeight: 200,
-          bgcolor: "#fffbf5",
+          bgcolor: bg ?? "#fffbf5",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -176,7 +191,7 @@ export default function PersonalProjectsSection() {
                     display: "flex",
                   }}
                 >
-                  <ProjectImage image={project.image} title={project.title} />
+                  <ProjectImage image={project.image} title={project.title} bg={project.imageBg} />
                 </Box>
 
                 <Box sx={{ p: { xs: 2.75, md: 4 }, flex: 1 }}>
@@ -209,13 +224,16 @@ export default function PersonalProjectsSection() {
                   >
                     {project.title}
                   </Typography>
-                  <Typography
-                    sx={{ color: "#78e8d5", fontWeight: 600, mb: 2, fontSize: ".95rem" }}
-                  >
+                  <Typography sx={{ color: "#78e8d5", fontWeight: 600, mb: 2, fontSize: ".95rem" }}>
                     {project.tagline}
                   </Typography>
                   <Typography
-                    sx={{ color: "rgba(232,244,244,.68)", lineHeight: 1.75, mb: 2.5, fontSize: ".93rem" }}
+                    sx={{
+                      color: "rgba(232,244,244,.68)",
+                      lineHeight: 1.75,
+                      mb: 2.5,
+                      fontSize: ".93rem",
+                    }}
                   >
                     {project.description}
                   </Typography>
@@ -240,7 +258,9 @@ export default function PersonalProjectsSection() {
                   <Stack direction="row" spacing={1.5} flexWrap="wrap" useFlexGap>
                     {project.websiteUrl && (
                       <Button
-                        onClick={() => window.open(project.websiteUrl, "_blank", "noopener,noreferrer")}
+                        onClick={() =>
+                          window.open(project.websiteUrl, "_blank", "noopener,noreferrer")
+                        }
                         startIcon={<FiGlobe />}
                         variant="contained"
                         sx={{
@@ -273,7 +293,9 @@ export default function PersonalProjectsSection() {
                     )}
                     {project.sourceUrl && (
                       <Button
-                        onClick={() => window.open(project.sourceUrl, "_blank", "noopener,noreferrer")}
+                        onClick={() =>
+                          window.open(project.sourceUrl, "_blank", "noopener,noreferrer")
+                        }
                         startIcon={<FaGithub />}
                         variant="outlined"
                         sx={{
@@ -312,13 +334,13 @@ export default function PersonalProjectsSection() {
                       bgcolor: "rgba(12,24,33,.82)",
                       p: 3,
                       transition: "transform .3s, border-color .3s",
-                      "&:hover": { transform: "translateY(-6px)", borderColor: "rgba(0,255,209,.4)" },
+                      "&:hover": {
+                        transform: "translateY(-6px)",
+                        borderColor: "rgba(0,255,209,.4)",
+                      },
                     }}
                   >
-                    <Typography
-                      variant="h6"
-                      sx={{ fontWeight: 700, color: "#eaf7f5", mb: 1 }}
-                    >
+                    <Typography variant="h6" sx={{ fontWeight: 700, color: "#eaf7f5", mb: 1 }}>
                       {project.title}
                     </Typography>
                     <Typography sx={{ color: "rgba(232,244,244,.64)", fontSize: ".88rem", mb: 2 }}>
@@ -331,7 +353,11 @@ export default function PersonalProjectsSection() {
                           label={tech}
                           size="small"
                           variant="outlined"
-                          sx={{ borderColor: "rgba(0,255,209,.24)", color: "#92ecdc", fontSize: ".7rem" }}
+                          sx={{
+                            borderColor: "rgba(0,255,209,.24)",
+                            color: "#92ecdc",
+                            fontSize: ".7rem",
+                          }}
                         />
                       ))}
                     </Stack>
